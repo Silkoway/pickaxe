@@ -32,6 +32,8 @@ export enum TokenType {
 export type Token = {
     type: TokenType,
     value: string,
+    col: number,
+    row: number
 }
 
 export class Lexer {
@@ -41,6 +43,8 @@ export class Lexer {
     }
 
     lex() {
+        let col = 1;
+        let row = 1;
         let buffer = "";
         let tokens: Token[] = [];
         let instring = false;
@@ -78,17 +82,19 @@ export class Lexer {
 
         ];
         for (let i = 0; i < this.input.length; i++) {
+            col ++;
+            if (this.input[i] === "\n") {row++; col = 1}
             let parse = () => {
                 let parsed = false
                 pushes.forEach(({keyword, _enum}) => {
                     if (!parsed && buffer === keyword) {
                         buffer = "";
-                        tokens.push({type: _enum, value: ""}) 
+                        tokens.push({type: _enum, value: "", col: col, row: row}) 
                         parsed = true
                     }
                 })
                 
-                if (!parsed) tokens.push({type: TokenType.Unknown, value: buffer})
+                if (!parsed) tokens.push({type: TokenType.Unknown, value: buffer, col: col, row: row})
                 buffer = "";
             }
             if (this.input[i] === "\"" && !instring && !escaped) {
@@ -96,7 +102,7 @@ export class Lexer {
                 
             } else if (instring && this.input[i] === "\"" && !escaped) {
                 instring = false;
-                tokens.push({ type: TokenType.StringLiteral, value: buffer })
+                tokens.push({ type: TokenType.StringLiteral, value: buffer , col: col, row: row})
                 buffer = ""
             } else if (this.input[i] === "\\") {
                 escaped = true;
@@ -105,7 +111,7 @@ export class Lexer {
                 ops.forEach(({keyword, _enum}) => {
                     if (!parsed && this.input[i] === keyword) {
                         parse()
-                        tokens.push({type: _enum, value: ""})       
+                        tokens.push({type: _enum, value: "", col: col, row: row})       
                         parsed = true
                     }
                 })

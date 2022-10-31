@@ -4,6 +4,7 @@ import { hideBin } from 'yargs/helpers'
 import { err } from './utils'
 import fs from 'fs'
 import { Lexer, TokenType } from './lexer'
+import { Parser } from './parser'
 const argv: any = yargs(hideBin(process.argv)).argv
 
 let filename = argv._[0]
@@ -13,8 +14,10 @@ if (filename === undefined) {
 }
 if (fs.existsSync(filename)) {
     let lexer = new Lexer(fs.readFileSync(filename, 'utf8'))
-    let out = lexer.lex().map(d => ({type: TokenType[d.type], value: d.value}))
-    console.log(out)
+    let parser = new Parser(lexer.lex())
+    fs.writeFileSync("tests/out.json", JSON.stringify(parser.parse(), null, 4))
+    console.log("Parsed, written data into 'tests/out.json'")
+    
 } else {
     err("File path specified does not lead to an existing file. Are you sure you typed the right path?")
 }

@@ -1,0 +1,106 @@
+{
+    "children": [
+        {
+            "desc": "Importing \"std\" library.",
+            "value": "std",
+            "type": "import"
+        },
+        {
+            "desc": "Error during parsing or keyword not implemented.",
+            "value": "",
+            "type": "Unknown"
+        },
+        {
+            "desc": "Error during parsing or keyword not implemented.",
+            "value": "",
+            "type": "Unknown"
+        },
+        {
+            "desc": "Error during parsing or keyword not implemented.",
+            "value": "",
+            "type": "Unknown"
+        },
+        {
+            "desc": "Error during parsing or keyword not implemented.",
+            "value": "",
+            "type": "Unknown"
+        },
+        {
+            "desc": "Error during parsing or keyword not implemented.",
+            "value": "",
+            "type": "Unknown"
+        },
+        {
+            "desc": "Error during parsing or keyword not implemented.",
+            "value": "",
+            "type": "Unknown"
+        },
+        {
+            "desc": "Error during parsing or keyword not implemented.",
+            "value": "",
+            "type": "Unknown"
+        },
+        {
+            "desc": "Error during parsing or keyword not implemented.",
+            "value": "",
+            "type": "Unknown"
+        },
+        {
+            "desc": "Error during parsing or keyword not implemented.",
+            "value": "",
+            "type": "Unknown"
+        },
+        {
+            "desc": "Error during parsing or keyword not implemented.",
+            "value": "",
+            "type": "Unknown"
+        },
+        {
+            "desc": "Error during parsing or keyword not implemented.",
+            "value": "",
+            "type": "Unknown"
+        },
+        {
+            "instructions": [],
+            "desc": "Event keyword",
+            "name": "load",
+            "type": "event"
+        },
+        {
+            "desc": "Error during parsing or keyword not implemented.",
+            "value": "",
+            "type": "Unknown"
+        },
+        {
+            "desc": "Error during parsing or keyword not implemented.",
+            "value": "",
+            "type": "Unknown"
+        },
+        {
+            "desc": "Error during parsing or keyword not implemented.",
+            "value": "",
+            "type": "Unknown"
+        },
+        {
+            "desc": "Error during parsing or keyword not implemented.",
+            "value": "",
+            "type": "Unknown"
+        },
+        {
+            "desc": "Error during parsing or keyword not implemented.",
+            "value": "",
+            "type": "Unknown"
+        },
+        {
+            "desc": "Error during parsing or keyword not implemented.",
+            "value": "",
+            "type": "Unknown"
+        },
+        {
+            "desc": "Error during parsing or keyword not implemented.",
+            "value": "",
+            "type": "Unknown"
+        }
+    ],
+    "desc": ""
+}
