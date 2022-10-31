@@ -1,0 +1,9 @@
+import std;
+
+macro print (msg) {
+    std.tellraw(msg);
+}
+
+event load() {
+    std.tellraw("Hello, world!\n");
+}
