@@ -6,100 +6,62 @@
             "type": "import"
         },
         {
-            "desc": "Error during parsing or keyword not implemented.",
-            "value": "",
-            "type": "Unknown"
+            "instructions": [
+                {
+                    "ids": [
+                        "std",
+                        "tellraw"
+                    ],
+                    "desc": "Calling function",
+                    "params": [
+                        {
+                            "desc": "Either object or not implemented{type: 'Unknown', value: 'msg'}",
+                            "value": "msg",
+                            "type": "Object"
+                        }
+                    ],
+                    "type": "func_call"
+                }
+            ],
+            "desc": "Macro keyword",
+            "name": "print",
+            "type": "macro",
+            "params": [
+                {
+                    "desc": "Either object or not implemented{type: 'Unknown', value: 'msg'}",
+                    "value": "msg",
+                    "type": "Object"
+                }
+            ]
         },
         {
-            "desc": "Error during parsing or keyword not implemented.",
-            "value": "",
-            "type": "Unknown"
-        },
-        {
-            "desc": "Error during parsing or keyword not implemented.",
-            "value": "",
-            "type": "Unknown"
-        },
-        {
-            "desc": "Error during parsing or keyword not implemented.",
-            "value": "",
-            "type": "Unknown"
-        },
-        {
-            "desc": "Error during parsing or keyword not implemented.",
-            "value": "",
-            "type": "Unknown"
-        },
-        {
-            "desc": "Error during parsing or keyword not implemented.",
-            "value": "",
-            "type": "Unknown"
-        },
-        {
-            "desc": "Error during parsing or keyword not implemented.",
-            "value": "",
-            "type": "Unknown"
-        },
-        {
-            "desc": "Error during parsing or keyword not implemented.",
-            "value": "",
-            "type": "Unknown"
-        },
-        {
-            "desc": "Error during parsing or keyword not implemented.",
-            "value": "",
-            "type": "Unknown"
-        },
-        {
-            "desc": "Error during parsing or keyword not implemented.",
-            "value": "",
-            "type": "Unknown"
-        },
-        {
-            "desc": "Error during parsing or keyword not implemented.",
-            "value": "",
-            "type": "Unknown"
-        },
-        {
-            "instructions": [],
+            "instructions": [
+                {
+                    "ids": [
+                        "std",
+                        "tellraw"
+                    ],
+                    "desc": "Calling function",
+                    "params": [
+                        {
+                            "desc": "String literal",
+                            "value": "Hello, world!\n",
+                            "type": "string_literal"
+                        }
+                    ],
+                    "type": "func_call"
+                }
+            ],
             "desc": "Event keyword",
             "name": "load",
-            "type": "event"
-        },
-        {
-            "desc": "Error during parsing or keyword not implemented.",
-            "value": "",
-            "type": "Unknown"
-        },
-        {
-            "desc": "Error during parsing or keyword not implemented.",
-            "value": "",
-            "type": "Unknown"
-        },
-        {
-            "desc": "Error during parsing or keyword not implemented.",
-            "value": "",
-            "type": "Unknown"
-        },
-        {
-            "desc": "Error during parsing or keyword not implemented.",
-            "value": "",
-            "type": "Unknown"
-        },
-        {
-            "desc": "Error during parsing or keyword not implemented.",
-            "value": "",
-            "type": "Unknown"
-        },
-        {
-            "desc": "Error during parsing or keyword not implemented.",
-            "value": "",
-            "type": "Unknown"
-        },
-        {
-            "desc": "Error during parsing or keyword not implemented.",
-            "value": "",
-            "type": "Unknown"
+            "type": "event",
+            "params": [
+                {
+                    "desc": "Either object or not implemented{type: 'Unknown', value: 'msg'}",
+                    "value": "msg",
+                    "type": "Object"
+                }
+            ]
         }
     ],
     "desc": ""

@@ -16,7 +16,10 @@ if (filename === undefined) {
     (0, utils_1.err)("File path not specified. Use it like this: `pickc {filepath}`");
 }
 if (fs_1.default.existsSync(filename)) {
-    let lexer = new lexer_1.Lexer(fs_1.default.readFileSync(filename, 'utf8'));
+    let file = fs_1.default.readFileSync(filename, 'utf8');
+    (0, utils_1.setupGlobalSource)(file);
+    let lexer = new lexer_1.Lexer(file);
+    console.log(lexer.lex().map(d => ({ type: lexer_1.TokenType[d.type], value: d.value })));
     let parser = new parser_1.Parser(lexer.lex());
     fs_1.default.writeFileSync("tests/out.json", JSON.stringify(parser.parse(), null, 4));
     console.log("Parsed, written data into 'tests/out.json'");

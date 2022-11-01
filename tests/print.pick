@@ -4,6 +4,6 @@ macro print (msg) {
     std.tellraw(msg);
 }
 
-event load {
+event load (msg) {
     std.tellraw("Hello, world!\n");
 }
